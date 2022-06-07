@@ -9,6 +9,10 @@ set cursorline              " highlight current cursorline
 set ttyfast                 " Speed up scrolling in Vim
 set spell                   " enable spell check (may need to download language package)
 set noswapfile              " disable creating swap file
+set showtabline=2
+set autowrite
+filetype plugin on
+set omnifunc=syntaxcomplete#Complete
 
 "Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
 "If you're using tmux version 2.2 or later, you can remove the outermost $TMUX check and use tmux's 24-bit color support
@@ -43,6 +47,11 @@ call plug#begin()
  Plug 'neoclide/coc.nvim', {'branch': 'release'}
  Plug 'deoplete-plugins/deoplete-clang'
  Plug 'arcticicestudio/nord-vim'
+ Plug 'jdonaldson/vaxe'
+ Plug 'https://github.com/preservim/nerdtree', { 'on': 'NERDTreeToggle' }
+	Plug 'LunarWatcher/auto-pairs'
+ Plug 'maxboisvert/vim-simple-complete'
 call plug#end()
 
-colorscheme nord
+colorscheme gruvbox
+NERDTreeToggle
