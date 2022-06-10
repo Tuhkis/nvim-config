@@ -30,6 +30,7 @@ if (empty($TMUX))
  endif
 endif
 
+" Autocomplete stuff
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
       \ <SID>check_back_space() ? "\<TAB>" :
@@ -43,15 +44,21 @@ endfunction
 
 
 call plug#begin()
- Plug 'morhetz/gruvbox'
- Plug 'neoclide/coc.nvim', {'branch': 'release'}
- Plug 'deoplete-plugins/deoplete-clang'
- Plug 'arcticicestudio/nord-vim'
- Plug 'jdonaldson/vaxe'
- Plug 'https://github.com/preservim/nerdtree', { 'on': 'NERDTreeToggle' }
-	Plug 'LunarWatcher/auto-pairs'
- Plug 'maxboisvert/vim-simple-complete'
+ Plug 'morhetz/gruvbox'                                                       " Cool theme
+ Plug 'neoclide/coc.nvim', {'branch': 'release'}                              " Cock hehe
+ Plug 'deoplete-plugins/deoplete-clang'                                       " C/CPP plugin
+ Plug 'arcticicestudio/nord-vim'                                              " Other cool theme :D
+ Plug 'jdonaldson/vaxe'                                                       " Random haxe plugin
+ Plug 'https://github.com/preservim/nerdtree', { 'on': 'NERDTreeToggle' }     " NERDTree!
+	Plug 'LunarWatcher/auto-pairs'                                               " Autoclose brackets and such
+ Plug 'maxboisvert/vim-simple-complete'                                       " I remember this being a really cool one. Just can't remember what it does
 call plug#end()
 
-colorscheme gruvbox
-NERDTreeToggle
+colorscheme gruvbox " Set Colourscheme
+
+" Set terminal stuff
+tnoremap <ESC> <C-\><C-n>
+belowright spl | terminal
+resize 8
+
+NERDTreeToggle " Open NERDTree
