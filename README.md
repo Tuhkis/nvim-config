@@ -9,5 +9,5 @@ Admittably it's still lacking.
 - Cool Gruvbox and Nord themes
 - Autocompletion based on open files.
 
-# Screenshot
-![Alt text](url "Title")
+# Screenshot(s)
+![Screenshot of Nvim](/repository/screenshots/1.png? "Screenshot 1")
