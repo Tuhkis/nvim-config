@@ -10,4 +10,4 @@ Admittably it's still lacking.
 - Autocompletion based on open files.
 
 # Screenshot(s)
-![Screenshot of Nvim](/repository/screenshots/1.png? "Screenshot 1")
+![Screenshot of Nvim](./screenshots/1.png? "Screenshot 1")
