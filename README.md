@@ -11,6 +11,14 @@ Admittably it's still lacking.
 - Discord rich presense
 # Installing
 So you realise how good it is?
+on LINUX run install script with:
+```
+wget -O - https://raw.githubusercontent.com/tuhkis/nvim-config/main/installNvimConf.sh | bash
+```
+The script might not be the very best, but it works.
+
+OR
+
 clone this directory with:
 ```
 git clone "https://github.com/Tuhkis/nvim-config.git"
