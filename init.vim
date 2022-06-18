@@ -1,3 +1,13 @@
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"  This is my Neovim config.                                   "
+"  I build this from multiple sources on the internet.         "
+"  You need vimPlug for this to work.                          "
+"  Run :PlugInstall                                            "
+"                                                              "
+"  There is a floating terminal window. Use F12 to open it     "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
 set number
 set mouse=v
 set nocompatible            " disable compatibility to old-time vi
@@ -44,21 +54,62 @@ endfunction
 
 
 call plug#begin()
- Plug 'morhetz/gruvbox'                                                       " Cool theme
  Plug 'neoclide/coc.nvim', {'branch': 'release'}                              " Cock hehe
  Plug 'deoplete-plugins/deoplete-clang'                                       " C/CPP plugin
- Plug 'arcticicestudio/nord-vim'                                              " Other cool theme :D
  Plug 'jdonaldson/vaxe'                                                       " Random haxe plugin
  Plug 'https://github.com/preservim/nerdtree', { 'on': 'NERDTreeToggle' }     " NERDTree!
 	Plug 'LunarWatcher/auto-pairs'                                               " Autoclose brackets and such
- Plug 'maxboisvert/vim-simple-complete'                                       " I remember this being a really cool one. Just can't remember what it does
+ Plug 'vim-airline/vim-airline'                                               " Cool infobar thingy
+ Plug 'vim-airline/vim-airline-themes'                                        " Themes foor infobar thingy
+	Plug 'voldikss/vim-floaterm'                                                 " Floating terminal window just if needed
+	Plug 'maxboisvert/vim-simple-complete'                                       " I remember this being a really cool one. Just can't remember what it does
+ Plug 'haystackandroid/forgotten'                                             " Cool theme I'm using
+ " Plug 'morhetz/gruvbox'                                                     " Cool theme I used to use
+ " Plug 'arcticicestudio/nord-vim'                                            " Cool theme I used to use
 call plug#end()
 
-colorscheme gruvbox " Set Colourscheme
+colorscheme forgotten-dark " Set Colourscheme
 
-" Set terminal stuff
+let g:airline#extensions#tabline#enabled = 1
+
+" air-line looking cool (need powerline font)
+let g:airline_powerline_fonts = 1
+
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+
+" unicode symbols (These are backup if powerline fonts are not installed)
+let g:airline_left_sep = '»'
+let g:airline_left_sep = '▶'
+let g:airline_right_sep = '«'
+let g:airline_right_sep = '◀'
+let g:airline_symbols.linenr = '␊'
+let g:airline_symbols.linenr = '␤'
+let g:airline_symbols.linenr = '¶'
+let g:airline_symbols.branch = '⎇'
+let g:airline_symbols.paste = 'ρ'
+let g:airline_symbols.paste = 'Þ'
+let g:airline_symbols.paste = '∥'
+let g:airline_symbols.whitespace = 'Ξ'
+
+" airline symbols
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+let g:airline_symbols.branch = ''
+let g:airline_symbols.readonly = ''
+let g:airline_symbols.linenr = ''
+
+" Set terminal stuff (Open on bottom)
 tnoremap <ESC> <C-\><C-n>
 belowright spl | terminal
-resize 8
+resize 11
+
+" Set a floating terminal for larger view.
+let g:floaterm_keymap_toggle = '<F12>'
+let g:floaterm_width = 0.9
+let g:floaterm_height = 0.9
 
 NERDTreeToggle " Open NERDTree
