@@ -14,6 +14,7 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 nvim --cmd 'echo Installing plugins.' \
      -c 'PlugInstall' \ # Install plugins
      -c 'qa! # Quit
-nvim --cmd 'echo Installing coc plugins.' \
-     -c 'CocInstall coc-discord-rpc' \
-     -c 'qa!'
+# nvim --cmd 'echo Installing coc plugins.' \
+#      -c 'CocInstall coc-discord-rpc' \
+#     -c 'qa!'
+#
