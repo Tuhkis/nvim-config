@@ -8,7 +8,7 @@ Admittably it's still lacking.
 - Cool themes
 - Autocompletion based on open files.
 - Cool infobar with triangles
-- Discord rich presense
+- Discord rich presense - Borked right now ):
 # Installing
 So you realise how good it is?
 on LINUX run install script with:
@@ -26,7 +26,6 @@ git clone "https://github.com/Tuhkis/nvim-config.git"
 Move the files into `~/.config/nvim/` on linux. For others you'll figure it out.
 
 Then run inside Neovim `:PlugInstall` You need vim-plug installed [install vim-plug here](https://github.com/junegunn/vim-plug).
-Then also run `:CocInstall coc-discord-rpc` [Link to  coc-discord-rpc](https://github.com/leonardssh/coc-discord-rpc)
 # Notes
 - Use `F12` to open floating terminal.
 - You'd like to have [Powerline fonts installed](https://github.com/powerline/fonts).
