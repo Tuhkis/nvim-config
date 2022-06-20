@@ -13,7 +13,7 @@ Admittably it's still lacking git integration.
 # Installing
 So you realise how good it is?
 on LINUX run install script with:
-```
+```shell
 wget -O - https://raw.githubusercontent.com/tuhkis/nvim-config/main/installNvimConf.sh | bash
 ```
 Also run `:CocInstall coc-discord-neovim` for discord rich presense.
@@ -22,7 +22,7 @@ The script might not be the very best, but it works.
 OR
 
 clone this directory with:
-```
+```shell
 git clone "https://github.com/Tuhkis/nvim-config.git"
 ```
 Move the files into `~/.config/nvim/` on linux. For others you'll figure it out.
@@ -33,7 +33,7 @@ Also run `:CocInstall coc-discord-neovim` for discord rich presense.
 - Use `F12` to open floating terminal.
 - You'd like to have [Powerline fonts installed](https://github.com/powerline/fonts).
 - Use a makefile in your project root as a build system. (Run with F5 or CTRL-b in normal mode) eg.
-```
+```makefile
 # This is eample ./makefile, for an imaginary python project. When the  shortcut is used it triggers ":make run."
 run:
  python3 main.py
