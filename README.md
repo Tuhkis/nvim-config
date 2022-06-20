@@ -16,6 +16,7 @@ on LINUX run install script with:
 ```
 wget -O - https://raw.githubusercontent.com/tuhkis/nvim-config/main/installNvimConf.sh | bash
 ```
+Also run `:CocInstall coc-discord-neovim` for discord rich presense.
 The script might not be the very best, but it works.
 
 OR
