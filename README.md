@@ -8,7 +8,8 @@ Admittably it's still lacking.
 - Cool themes
 - Autocompletion based on open files.
 - Cool infobar with triangles
-- Discord rich presense - Borked right now ):
+- Discord rich presense
+- Build systems with makefiles
 # Installing
 So you realise how good it is?
 on LINUX run install script with:
@@ -26,9 +27,16 @@ git clone "https://github.com/Tuhkis/nvim-config.git"
 Move the files into `~/.config/nvim/` on linux. For others you'll figure it out.
 
 Then run inside Neovim `:PlugInstall` You need vim-plug installed [install vim-plug here](https://github.com/junegunn/vim-plug).
+Also run `:CocInstall coc-discord-neovim` for discord rich presense.
 # Notes
 - Use `F12` to open floating terminal.
 - You'd like to have [Powerline fonts installed](https://github.com/powerline/fonts).
+- Use a makefile in your project root as a build system. (Run with F5 or CTRL-b in normal mode) eg.
+```
+# This is eample ./makefile, for an imaginary python project. When the  shortcut is used it triggers ":make run."
+run:
+ python3 main.py
+```
 # Screenshot(s)
 ![Screenshot of Nvim](./screenshots/1.png? "Screenshot 1")
 General overview

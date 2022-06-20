@@ -1,10 +1,13 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                                                              "
 "  This is my Neovim config.                                   "
 "  I build this from multiple sources on the internet.         "
 "  You need vimPlug for this to work.                          "
 "  Run :PlugInstall                                            "
 "                                                              "
 "  There is a floating terminal window. Use F12 to open it     "
+"  CTRL-b or F5 to run ":make run"                             "
+"                                                              "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
@@ -55,12 +58,11 @@ endfunction
 
 call plug#begin()
  Plug 'neoclide/coc.nvim', {'branch': 'release'}                              " Cock hehe
- Plug 'deoplete-plugins/deoplete-clang'                                       " C/CPP plugin
  Plug 'jdonaldson/vaxe'                                                       " Random haxe plugin
  Plug 'https://github.com/preservim/nerdtree', { 'on': 'NERDTreeToggle' }     " NERDTree!
 	Plug 'LunarWatcher/auto-pairs'                                               " Autoclose brackets and such
  Plug 'vim-airline/vim-airline'                                               " Cool infobar thingy
- Plug 'vim-airline/vim-airline-themes'                                        " Themes foor infobar thingy
+ Plug 'vim-airline/vim-airline-themes'                                        " Themes for infobar thingy
 	Plug 'voldikss/vim-floaterm'                                                 " Floating terminal window just if needed
 	Plug 'maxboisvert/vim-simple-complete'                                       " I remember this being a really cool one. Just can't remember what it does
  Plug 'haystackandroid/forgotten'                                             " Cool theme I'm using
@@ -69,6 +71,7 @@ call plug#begin()
 call plug#end()
 
 colorscheme forgotten-dark " Set Colourscheme
+let g:airline_theme='angr'
 
 let g:airline#extensions#tabline#enabled = 1
 
@@ -94,9 +97,9 @@ let g:airline_symbols.paste = '∥'
 let g:airline_symbols.whitespace = 'Ξ'
 
 " airline symbols
-let g:airline_left_sep = ''
+let g:airline_left_sep = '  '
 let g:airline_left_alt_sep = ''
-let g:airline_right_sep = ''
+let g:airline_right_sep = '  '
 let g:airline_right_alt_sep = ''
 let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
@@ -105,11 +108,15 @@ let g:airline_symbols.linenr = ''
 " Set terminal stuff (Open on bottom)
 tnoremap <ESC> <C-\><C-n>
 belowright spl | terminal
-resize 11
+resize 10
 
 " Set a floating terminal for larger view.
 let g:floaterm_keymap_toggle = '<F12>'
-let g:floaterm_width = 0.9
-let g:floaterm_height = 0.9
+let g:floaterm_width = 0.99
+let g:floaterm_height = 0.99
+
+" Make ctrl-B and F5 run "make run"-command in normal mode
+nnoremap <C-b> :make run<CR>
+nnoremap <F5> :make run<CR>
 
 NERDTreeToggle " Open NERDTree
