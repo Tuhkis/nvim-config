@@ -1,7 +1,7 @@
 # nvim-config
 This is my neovim config  ¯\_(ツ)_/¯ <br>
 (This is built from many internet sources. I couldn't have written this all.) <br>
-Admittably it's still lacking.
+Admittably it's still lacking git integration.
 # Features
 - Nerdtree filemanager
 - Inbuilt terminal (normal AND floating)
